@@ -1,0 +1,18 @@
+<table border="5px" class="table table-striped">
+        <thead>
+    <tr style="background-color: rgb(117, 130, 131);">
+        <th scope="col">Title</th>
+        <th scope="col">Image</th>
+        <th scope="col">Description</th>
+        <th></th>
+    </tr>
+        </thead>
+        <tbody>
+    <tr *ngFor='let i of joblist'>
+            <td scope="row">{{i.title}}</td>
+            <td width="150px"><img src="{{i.image}}" width="200px" height="150px"></td>
+            <td>{{i.description}}</td>
+            <td width="100px"><button style="background-color: rgb(202, 247, 247);" (click)='remove(i)'>Remove</button></td>
+        </tr>
+    </tbody>
+</table>
